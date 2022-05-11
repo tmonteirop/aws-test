@@ -1,0 +1,42 @@
+{
+  "name": "api_validateuser",
+  "version": "1.0.0",
+  "description": "validation user Postgres SQL database",
+  "main": "index.js",
+  "author": "Thiago A. Monteiro",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "prisma": {
+    "seed": "node prisma/seed/seed.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "prettier": "2.6.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.11.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "npmlog": "^6.0.1",
+    "prisma": "^3.11.0",
+    "supertest": "^6.2.2",
+    "swagger-ui-express": "^4.3.0"
+  }
+}

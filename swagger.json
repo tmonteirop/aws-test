@@ -1,0 +1,52 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title":"Login Documentation",
+        "description":"This is an API Login",
+        "version": "1.0.0",
+        "contact": {
+            "email":"tmonteirop@gmail.com"
+        }
+    },
+    "paths": {
+        "/auth": {
+            "post" : {
+                "tags": ["Auth"],
+                "summary": "Validate a User",
+                "description": "Validate a User login username and password username",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type":"object",
+                                "properties": {
+                                    "username": {
+                                        "type":"string"
+                                    },
+                                    "password": {
+                                        "type":"string"
+                                    }
+                                },
+                                "example": {
+                                    "username":"username",
+                                    "password":"username"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description":"Usuário logado!"
+                    },
+                    "401": {
+                        "description":"Usuário ou senha inválidos!"
+                    },
+                    "500": {
+                        "description": "Erro ao validar usuário!"
+                    }
+                }
+            }
+        }
+    }
+}
